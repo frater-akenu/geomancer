@@ -1,10 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package geomancer.objects;
 
+import geomancer.objects.charts.ShieldChart;
 import geomancer.objects.charts.ThreeFiguresChart;
 import geomancer.objects.charts.TwoFiguresChart;
 import java.util.Random;
@@ -33,6 +29,10 @@ public class FigureGenerator {
     
     public TwoFiguresChart generateTwoFiguresChart() {
         return new TwoFiguresChart(generateFig(), generateFig());
+    }
+    
+    public ShieldChart generateShieldChart() {
+        return new ShieldChart(generateFig(), generateFig(), generateFig(), generateFig());
     }
     
     
