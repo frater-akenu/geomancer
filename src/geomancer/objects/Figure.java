@@ -14,10 +14,17 @@ public class Figure {
         int newhead = head + figure.getHead();
         int newneck = neck + figure.getNeck();
         int newbody = body + figure.getBody();
-        int newfeet = body + figure.getFeet();
+        int newfeet = feet + figure.getFeet();
         
         return new Figure(newhead, newneck, newbody, newfeet);
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        Figure objFig = (Figure) obj;
+        return this.toString().equals(objFig.toString());
+    }
+    
     
     
     public int getHead() {
